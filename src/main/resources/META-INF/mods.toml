@@ -3,7 +3,7 @@ loaderVersion="[43,)"
 license="Unlicense"
 [[mods]]
 modId="blahaj"
-version="0.1.4"
+version="0.1.5"
 displayName="Blåhaj - Restitched"
 displayURL="https://modrinth.com/mod/blahaj-restitched"
 logoFile="icon.png"

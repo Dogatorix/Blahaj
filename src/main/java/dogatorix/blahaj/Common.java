@@ -17,6 +17,8 @@ public class Common {
 		items.register("gray_shark", () -> new CuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.gray_shark.tooltip"));
 		items.register("blue_whale", () -> new CuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.blue_whale.tooltip"));
 		items.register("bread", () -> new CuddlyItem(new Item.Properties().stacksTo(1), null));
+		items.register("reaper", () -> new CuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.reaper.tooltip"));
+		items.register("killer_whale", () -> new CuddlyItem(new Item.Properties().stacksTo(1), "item.blahaj.killer_whale.tooltip"));
 		items.register(FMLJavaModLoadingContext.get().getModEventBus());
 	}
 }

@@ -6,6 +6,10 @@
 	"item.blahaj.blue_whale": "Soft Toy Blue Whale",
 	"item.blahaj.blue_whale.tooltip": "The Blåvingad",
 	"item.blahaj.bread": "Bread Pillow",
+	"item.blahaj.reaper": "Soft Toy Reaper",
+	"item.blahaj.reaper.tooltip": "The Reaper Leviathan",
+	"item.blahaj.killer_whale": "Soft Toy Orca",
+	"item.blahaj.killer_whale.tooltip": "The Späckhuggare",
 	"tooltip.blahaj.owner.craft": "Crafted by %s",
 	"tooltip.blahaj.owner.rename": "%s av %s",
 	"response.blahaj.give_away": "You feel attached to your plushie!"
