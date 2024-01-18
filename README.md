@@ -13,4 +13,3 @@ Most plushies are currently unobtainable with the exception of Blåhaj, Blåving
 ## Credits
 - [hibiii](https://github.com/hibiii) - Original Blåhaj Mod
 - [agnor99](https://github.com/agnor99) - Original Forge Port
-- Icon of this project: Blobhaj by [Heatherhorns](https://ko-fi.com/heatherhorns), licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
