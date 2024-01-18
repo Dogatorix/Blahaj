@@ -1,8 +1,12 @@
 {
 	"item.blahaj.blue_shark": "Soft Toy Shark",
-	"item.blahaj.blue_shark.tooltip": "a.k.a. Blahaj",
+	"item.blahaj.blue_shark.tooltip": "The Blåhaj",
+	"item.blahaj.gray_shark": "Soft Toy Gray Shark",
+	"item.blahaj.gray_shark.tooltip": "The Klappar Haj",
+	"item.blahaj.blue_whale": "Soft Toy Blue Whale",
+	"item.blahaj.blue_whale.tooltip": "The Blåvingad",
 	"item.blahaj.bread": "Bread Pillow",
 	"tooltip.blahaj.owner.craft": "Crafted by %s",
-	"tooltip.blahaj.owner.rename": "%s of %s",
-	"response.blahaj.give_away": "You feel attached to you Plushie"
+	"tooltip.blahaj.owner.rename": "%s av %s",
+	"response.blahaj.give_away": "You feel attached to your plushie!"
 }

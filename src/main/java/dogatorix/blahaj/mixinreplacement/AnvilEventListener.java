@@ -1,6 +1,6 @@
-package hibi.blahaj.mixinreplacement;
+package dogatorix.blahaj.mixinreplacement;
 
-import hibi.blahaj.CuddlyItem;
+import dogatorix.blahaj.CuddlyItem;
 import net.minecraft.nbt.StringTag;
 import net.minecraftforge.event.AnvilUpdateEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

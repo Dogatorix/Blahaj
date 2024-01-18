@@ -1,9 +1,9 @@
-package hibi.blahaj;
+package dogatorix.blahaj;
 
 import java.util.List;
 import java.util.function.Consumer;
 
-import hibi.blahaj.mixinreplacement.HumanoidModelReplacement;
+import dogatorix.blahaj.mixinreplacement.HumanoidModelReplacement;
 import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.StringTag;

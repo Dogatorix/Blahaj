@@ -3,12 +3,12 @@ loaderVersion="[43,)"
 license="Unlicense"
 [[mods]]
 modId="blahaj"
-version="${file.jarVersion}"
-displayName="Blåhaj - Reforged"
-displayURL="https://modrinth.com/mod/blahaj-reforged"
+version="0.1.4"
+displayName="Blåhaj - Restitched"
+displayURL="https://modrinth.com/mod/blahaj-restitched"
 logoFile="icon.png"
-credits="Made by Hibi"
-authors="Made by Hibi, ported to Forge by agnor99, ported to 1.20.1 by Dogatorix"
+credits="Made by Dogatorix"
+authors="Original Blåhaj mod by hibi, ported to Forge by agnor99, continued by Dogatorix"
 
 description='''
 Soft toy, shark mod, 16px.

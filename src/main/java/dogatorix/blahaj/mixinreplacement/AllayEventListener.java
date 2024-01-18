@@ -1,6 +1,6 @@
-package hibi.blahaj.mixinreplacement;
+package dogatorix.blahaj.mixinreplacement;
 
-import hibi.blahaj.CuddlyItem;
+import dogatorix.blahaj.CuddlyItem;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionResult;
