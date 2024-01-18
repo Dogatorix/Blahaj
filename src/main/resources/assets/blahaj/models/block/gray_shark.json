@@ -1,0 +1,6 @@
+{
+	"parent": "blahaj:block/blue_shark",
+	"textures": {
+		"0": "blahaj:block/gray_shork"
+	}
+}

@@ -1,6 +1,7 @@
-package dogatorix.blahaj.mixinreplacement;
+package com.dogatorix.mixinreplacement;
 
-import dogatorix.blahaj.CuddlyItem;
+import com.dogatorix.CuddlyItem;
+
 import net.minecraft.nbt.StringTag;
 import net.minecraftforge.event.AnvilUpdateEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -12,7 +13,8 @@ public class AnvilEventListener {
 	@SubscribeEvent
 	public static void onAnvilUpdate(AnvilUpdateEvent event) {
 		if(event.getLeft().getItem() instanceof CuddlyItem) {
-			event.getLeft().addTagElement(CuddlyItem.OWNER_KEY, StringTag.valueOf(event.getPlayer().getName().getString()));
+			//todo: readd compatibility
+			//event.getLeft().addTagElement(CuddlyItem.OWNER_KEY, StringTag.valueOf(event.getPlayer().getName().getString()));
 		}
 	}
 }

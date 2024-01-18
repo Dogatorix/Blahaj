@@ -1,0 +1,6 @@
+{
+	"parent": "blahaj:block/blue_whale",
+	"textures": {
+		"0": "blahaj:block/killer_whale"
+	}
+}

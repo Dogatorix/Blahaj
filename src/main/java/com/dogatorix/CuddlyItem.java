@@ -1,14 +1,14 @@
-package dogatorix.blahaj;
+package com.dogatorix;
 
 import java.util.List;
 import java.util.function.Consumer;
-
-import dogatorix.blahaj.mixinreplacement.HumanoidModelReplacement;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.StringTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -18,14 +18,16 @@ import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 import net.minecraftforge.common.util.FakePlayer;
 import org.jetbrains.annotations.Nullable;
 
-public class CuddlyItem extends Item {
+import com.dogatorix.mixinreplacement.HumanoidModelReplacement;
+
+public class CuddlyItem extends BlockItem {
 
 	public static final String OWNER_KEY = "Owner";
 
 	private final Component subtitle;
 
-	public CuddlyItem(Properties properties, String subtitle) {
-		super(properties);
+	public CuddlyItem(Block block, Properties properties, String subtitle) {
+		super(block, properties);
 		this.subtitle = subtitle == null? null: Component.translatable(subtitle).withStyle(ChatFormatting.GRAY);
 	}
 
@@ -52,7 +54,8 @@ public class CuddlyItem extends Item {
 	@Override
 	public void onCraftedBy(ItemStack stack, Level level, Player player) {
 		if (player != null && !(player instanceof FakePlayer)) { // compensate for auto-crafter mods
-			stack.addTagElement(OWNER_KEY, StringTag.valueOf(player.getName().getString()));
+			//todo: readd compatibility
+			//stack.addTagElement(OWNER_KEY, StringTag.valueOf(player.getName().getString()));
 		}
 		super.onCraftedBy(stack, level, player);
 	}

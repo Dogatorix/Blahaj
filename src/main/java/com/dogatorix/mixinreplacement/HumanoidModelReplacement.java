@@ -1,4 +1,4 @@
-package dogatorix.blahaj.mixinreplacement;
+package com.dogatorix.mixinreplacement;
 
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.world.InteractionHand;

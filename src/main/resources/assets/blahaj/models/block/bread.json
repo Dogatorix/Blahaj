@@ -1,0 +1,60 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "blahaj:block/bred",
+		"particle": "blahaj:block/bred"
+	},
+	"elements": [
+		{
+			"name": "shork",
+			"from": [5, 0, -1],
+			"to": [11, 6, 16],
+			"faces": {
+				"north": {"uv": [8.5, 3, 11.5, 6], "texture": "#0"},
+				"east": {"uv": [0, 0, 8.5, 3], "texture": "#0"},
+				"south": {"uv": [8.5, 0, 11.5, 3], "texture": "#0"},
+				"west": {"uv": [0, 3, 8.5, 6], "texture": "#0"},
+				"up": {"uv": [3, 14.5, 0, 6], "texture": "#0"},
+				"down": {"uv": [6, 6, 3, 14.5], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [140, -60, 105],
+			"translation": [-8, 3.75, 6.25],
+			"scale": [1.15, 1.15, 1.15]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [140, -60, 105],
+			"translation": [-8, 3.75, 6.25],
+			"scale": [1.15, 1.15, 1.15]
+		},
+		"firstperson_righthand": {
+			"rotation": [70, -55, 60],
+			"translation": [-3.25, 7.25, 1]
+		},
+		"firstperson_lefthand": {
+			"rotation": [70, -55, 60],
+			"translation": [-3.25, 7.25, 1]
+		},
+		"ground": {
+			"translation": [0, 8, 0]
+		},
+		"gui": {
+			"rotation": [30, 135, 0],
+			"translation": [0.19, 5.75, 0],
+			"scale": [1.15, 1.15, 1.15]
+		},
+		"head": {
+			"translation": [0, 16.25, 0],
+			"scale": [1.25, 1.25, 1.25]
+		},
+		"fixed": {
+			"rotation": [0, -90, 0],
+			"translation": [0, 5, 1],
+			"scale": [0.1, 1, 1]
+		}
+	}
+}
