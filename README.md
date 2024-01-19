@@ -10,6 +10,10 @@ Most plushies are currently unobtainable with the exception of Blåhaj, Blåving
 
 ![Showcase](./.pretty_readme/showcase.png)
 
+## Contact
+* Email - vivian@dogatorix.com
+* Discord - @dogatorix
+
 ## Credits
 - [hibiii](https://github.com/hibiii) - Original Blåhaj Mod
 - [agnor99](https://github.com/agnor99) - Original Forge Port
