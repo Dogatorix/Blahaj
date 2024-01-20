@@ -22,7 +22,6 @@ eclipse
 run
 TEST.md
 *.js
-set
 
 # Files from Forge MDK
 forge*changelog.txt
