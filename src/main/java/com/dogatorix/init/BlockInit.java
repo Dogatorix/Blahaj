@@ -5,7 +5,7 @@ import static com.dogatorix.init.CreativeTabInit.addToTab;
 import com.dogatorix.Blahaj;
 import com.dogatorix.CuddlyBlock;
 import com.dogatorix.CuddlyItem;
-
+import com.dogatorix.YarnSpinnerBlock;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
@@ -41,5 +41,9 @@ public class BlockInit {
         public static final RegistryObject<CuddlyBlock> BREAD = BLOCKS.register("bread",
                         () -> new CuddlyBlock(
                                         BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).sound(SoundType.WOOL)));
+
+        public static final RegistryObject<Block> YARN_SPINNER = BLOCKS.register("yarn_spinner",
+                        () -> new YarnSpinnerBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
 }

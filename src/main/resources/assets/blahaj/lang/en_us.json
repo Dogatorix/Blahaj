@@ -13,5 +13,24 @@
 	"block.blahaj.killer_whale.tooltip": "The Späckhuggare",
 	"tooltip.blahaj.owner.craft": "Crafted by %s",
 	"tooltip.blahaj.owner.rename": "%s of %s",
-	"response.blahaj.give_away": "You feel attached to your plushie!"
+	"response.blahaj.give_away": "You feel attached to your plushie!",
+	"sounds.blahaj.squeak": "Toy Squeaks",
+	"block.blahaj.yarn_spinner": "Yarn Spinner",
+
+	"item.blahaj.black_yarn": "Black Yarn",
+	"item.blahaj.blue_yarn": "Blue Yarn",
+	"item.blahaj.brown_yarn": "Brown Yarn",
+	"item.blahaj.cyan_yarn": "Cyan Yarn",
+	"item.blahaj.gray_yarn": "Gray Yarn",
+	"item.blahaj.green_yarn": "Green Yarn",
+	"item.blahaj.light_blue_yarn": "Light Blue Yarn",
+	"item.blahaj.light_gray_yarn": "Light Gray Yarn",
+	"item.blahaj.lime_yarn": "Lime Yarn",
+	"item.blahaj.magenta_yarn": "Magenta Yarn",
+	"item.blahaj.orange_yarn": "Orange Yarn",
+	"item.blahaj.pink_yarn": "Pink Yarn",
+	"item.blahaj.purple_yarn": "Purple Yarn",
+	"item.blahaj.red_yarn": "Red Yarn",
+	"item.blahaj.white_yarn": "White Yarn",
+	"item.blahaj.yellow_yarn": "Yellow Yarn"
 }
