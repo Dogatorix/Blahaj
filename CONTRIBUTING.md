@@ -8,7 +8,7 @@ A guide for those who want to contribute models but struggle with GitHub.
 If you still find it challenging after reading this guide, consider growing some brain cells.
 
 ## Forking
-To begin, fork the [Blåhaj Repository](https://github.com/Dogatorix/Blahaj). This action clones the repository to your account, allowing you to make changes. Click the fork button in the top right corner of the repository page.
+To begin, [fork the Blåhaj Repository](https://github.com/Dogatorix/Blahaj/fork). This action clones the repository to your account, allowing you to make changes. Click the fork button in the top right corner of the repository page.
 
 ## Making Changes
 Now that you have your own repository, you can make changes. Edit a file by clicking the pencil icon in the top right corner. Add new files by clicking the "Add File" button on the repository page.
