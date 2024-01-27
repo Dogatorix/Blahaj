@@ -11,6 +11,8 @@
 	"block.blahaj.reaper.tooltip": "The Reaper Leviathan",
 	"block.blahaj.killer_whale": "Soft Toy Orca",
 	"block.blahaj.killer_whale.tooltip": "The Späckhuggare",
+	"block.blahaj.hammerhead_shark": "Soft Toy Hammerhead Shark",
+	"block.blahaj.hammerhead_shark.tooltip": "The Hammerhead",
 	"tooltip.blahaj.owner.craft": "Crafted by %s",
 	"tooltip.blahaj.owner.rename": "%s of %s",
 	"response.blahaj.give_away": "You feel attached to your plushie!",

@@ -4,7 +4,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.Container;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
@@ -15,22 +14,14 @@ import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.RecipeManager;
-import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
-import net.minecraftforge.items.wrapper.RecipeWrapper;
-
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
-
 import com.dogatorix.init.BlockEntityInit;
 import com.dogatorix.init.ItemInit;
 import com.dogatorix.screen.YarnSpinnerMenu;
@@ -75,8 +66,8 @@ public class YarnSpinnerBlockEntity extends BlockEntity implements MenuProvider 
     }
 
     @Override
-    public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @Nullable Direction side) {
-        if(cap == ForgeCapabilities.ITEM_HANDLER) {
+    public <T> LazyOptional<T> getCapability(Capability<T> cap, Direction side) {
+        if (cap == ForgeCapabilities.ITEM_HANDLER) {
             return lazyItemHandler.cast();
         }
 
@@ -97,7 +88,7 @@ public class YarnSpinnerBlockEntity extends BlockEntity implements MenuProvider 
 
     public void drops() {
         SimpleContainer inventory = new SimpleContainer(itemHandler.getSlots());
-        for(int i = 0; i < itemHandler.getSlots(); i++) {
+        for (int i = 0; i < itemHandler.getSlots(); i++) {
             inventory.setItem(i, itemHandler.getStackInSlot(i));
         }
         Containers.dropContents(this.level, this.worldPosition, inventory);
@@ -108,7 +99,6 @@ public class YarnSpinnerBlockEntity extends BlockEntity implements MenuProvider 
         return Component.translatable("block.blahaj.yarn_spinner");
     }
 
-    @Nullable
     @Override
     public AbstractContainerMenu createMenu(int pContainerId, Inventory pPlayerInventory, Player pPlayer) {
         return new YarnSpinnerMenu(pContainerId, pPlayerInventory, this, this.data);
@@ -130,11 +120,11 @@ public class YarnSpinnerBlockEntity extends BlockEntity implements MenuProvider 
     }
 
     public void tick(Level pLevel, BlockPos pPos, BlockState pState) {
-        if(hasRecipe()) {
+        if (hasRecipe()) {
             increaseCraftingProgress();
             setChanged(pLevel, pPos, pState);
 
-            if(hasProgressFinished()) {
+            if (hasProgressFinished()) {
                 craftItem();
                 resetProgress();
             }
@@ -146,18 +136,18 @@ public class YarnSpinnerBlockEntity extends BlockEntity implements MenuProvider 
     private void resetProgress() {
         progress = 0;
     }
-    
 
     private boolean hasRecipe() {
-        // boolean hasCraftingItem = this.itemHandler.getStackInSlot(INPUT_SLOT).getItem() == Items.WHITE_WOOL;
-        // ItemStack result = new ItemStack(Items.STRING);
-
-        // return hasCraftingItem && canInsertAmountIntoOutputSlot(result.getCount()) && canInsertItemIntoOutputSlot(result.getItem());
-
-        //instead of WHITE_WOOL, let's make an array of all the wool colors
-        Item[] woolColors = {Items.WHITE_WOOL, Items.ORANGE_WOOL, Items.MAGENTA_WOOL, Items.LIGHT_BLUE_WOOL, Items.YELLOW_WOOL, Items.LIME_WOOL, Items.PINK_WOOL, Items.GRAY_WOOL, Items.LIGHT_GRAY_WOOL, Items.CYAN_WOOL, Items.PURPLE_WOOL, Items.BLUE_WOOL, Items.BROWN_WOOL, Items.GREEN_WOOL, Items.RED_WOOL, Items.BLACK_WOOL};
-        Item[] yarnColors = {ItemInit.WHITE_YARN.get(), ItemInit.ORANGE_YARN.get(), ItemInit.MAGENTA_YARN.get(), ItemInit.LIGHT_BLUE_YARN.get(), ItemInit.YELLOW_YARN.get(), ItemInit.LIME_YARN.get(), ItemInit.PINK_YARN.get(), ItemInit.GRAY_YARN.get(), ItemInit.LIGHT_GRAY_YARN.get(), ItemInit.CYAN_YARN.get(), ItemInit.PURPLE_YARN.get(), ItemInit.BLUE_YARN.get(), ItemInit.BROWN_YARN.get(), ItemInit.GREEN_YARN.get(), ItemInit.RED_YARN.get(), ItemInit.BLACK_YARN.get()};
-        //now we can check if the input slot has any of the wool colors, and if it does, return a mod item that corresponds to that color
+        Item[] woolColors = { Items.WHITE_WOOL, Items.ORANGE_WOOL, Items.MAGENTA_WOOL, Items.LIGHT_BLUE_WOOL,
+                Items.YELLOW_WOOL, Items.LIME_WOOL, Items.PINK_WOOL, Items.GRAY_WOOL, Items.LIGHT_GRAY_WOOL,
+                Items.CYAN_WOOL, Items.PURPLE_WOOL, Items.BLUE_WOOL, Items.BROWN_WOOL, Items.GREEN_WOOL, Items.RED_WOOL,
+                Items.BLACK_WOOL };
+        Item[] yarnColors = { ItemInit.WHITE_YARN.get(), ItemInit.ORANGE_YARN.get(), ItemInit.MAGENTA_YARN.get(),
+                ItemInit.LIGHT_BLUE_YARN.get(), ItemInit.YELLOW_YARN.get(), ItemInit.LIME_YARN.get(),
+                ItemInit.PINK_YARN.get(), ItemInit.GRAY_YARN.get(), ItemInit.LIGHT_GRAY_YARN.get(),
+                ItemInit.CYAN_YARN.get(), ItemInit.PURPLE_YARN.get(), ItemInit.BLUE_YARN.get(),
+                ItemInit.BROWN_YARN.get(), ItemInit.GREEN_YARN.get(), ItemInit.RED_YARN.get(),
+                ItemInit.BLACK_YARN.get() };
         Boolean hasCraftingItem = false;
         for (int i = 0; i < woolColors.length; i++) {
             if (this.itemHandler.getStackInSlot(INPUT_SLOT).getItem() == woolColors[i]) {
@@ -170,24 +160,36 @@ public class YarnSpinnerBlockEntity extends BlockEntity implements MenuProvider 
         }
         return hasCraftingItem;
     }
+
     private void craftItem() {
-        Item[] woolColors = {Items.WHITE_WOOL, Items.ORANGE_WOOL, Items.MAGENTA_WOOL, Items.LIGHT_BLUE_WOOL, Items.YELLOW_WOOL, Items.LIME_WOOL, Items.PINK_WOOL, Items.GRAY_WOOL, Items.LIGHT_GRAY_WOOL, Items.CYAN_WOOL, Items.PURPLE_WOOL, Items.BLUE_WOOL, Items.BROWN_WOOL, Items.GREEN_WOOL, Items.RED_WOOL, Items.BLACK_WOOL};
-        Item[] yarnColors = {ItemInit.WHITE_YARN.get(), ItemInit.ORANGE_YARN.get(), ItemInit.MAGENTA_YARN.get(), ItemInit.LIGHT_BLUE_YARN.get(), ItemInit.YELLOW_YARN.get(), ItemInit.LIME_YARN.get(), ItemInit.PINK_YARN.get(), ItemInit.GRAY_YARN.get(), ItemInit.LIGHT_GRAY_YARN.get(), ItemInit.CYAN_YARN.get(), ItemInit.PURPLE_YARN.get(), ItemInit.BLUE_YARN.get(), ItemInit.BROWN_YARN.get(), ItemInit.GREEN_YARN.get(), ItemInit.RED_YARN.get(), ItemInit.BLACK_YARN.get()};
+        Item[] woolColors = { Items.WHITE_WOOL, Items.ORANGE_WOOL, Items.MAGENTA_WOOL, Items.LIGHT_BLUE_WOOL,
+                Items.YELLOW_WOOL, Items.LIME_WOOL, Items.PINK_WOOL, Items.GRAY_WOOL, Items.LIGHT_GRAY_WOOL,
+                Items.CYAN_WOOL, Items.PURPLE_WOOL, Items.BLUE_WOOL, Items.BROWN_WOOL, Items.GREEN_WOOL, Items.RED_WOOL,
+                Items.BLACK_WOOL };
+        Item[] yarnColors = { ItemInit.WHITE_YARN.get(), ItemInit.ORANGE_YARN.get(), ItemInit.MAGENTA_YARN.get(),
+                ItemInit.LIGHT_BLUE_YARN.get(), ItemInit.YELLOW_YARN.get(), ItemInit.LIME_YARN.get(),
+                ItemInit.PINK_YARN.get(), ItemInit.GRAY_YARN.get(), ItemInit.LIGHT_GRAY_YARN.get(),
+                ItemInit.CYAN_YARN.get(), ItemInit.PURPLE_YARN.get(), ItemInit.BLUE_YARN.get(),
+                ItemInit.BROWN_YARN.get(), ItemInit.GREEN_YARN.get(), ItemInit.RED_YARN.get(),
+                ItemInit.BLACK_YARN.get() };
         for (int i = 0; i < woolColors.length; i++) {
             if (this.itemHandler.getStackInSlot(INPUT_SLOT).getItem() == woolColors[i]) {
                 ItemStack result = new ItemStack(yarnColors[i]);
                 this.itemHandler.extractItem(INPUT_SLOT, 1, false);
-                this.itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(result.getItem(), this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + result.getCount()));
+                this.itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(result.getItem(),
+                        this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + result.getCount()));
             }
         }
     }
 
     private boolean canInsertItemIntoOutputSlot(Item item) {
-        return this.itemHandler.getStackInSlot(OUTPUT_SLOT).isEmpty() || this.itemHandler.getStackInSlot(OUTPUT_SLOT).is(item);
+        return this.itemHandler.getStackInSlot(OUTPUT_SLOT).isEmpty()
+                || this.itemHandler.getStackInSlot(OUTPUT_SLOT).is(item);
     }
 
     private boolean canInsertAmountIntoOutputSlot(int count) {
-        return this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + count <= this.itemHandler.getStackInSlot(OUTPUT_SLOT).getMaxStackSize();
+        return this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + count <= this.itemHandler
+                .getStackInSlot(OUTPUT_SLOT).getMaxStackSize();
     }
 
     private boolean hasProgressFinished() {

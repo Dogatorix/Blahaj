@@ -1,20 +1,12 @@
 package com.dogatorix.init;
 
-import static com.dogatorix.init.CreativeTabInit.addToTab;
-
 import com.dogatorix.Blahaj;
 import com.dogatorix.CuddlyBlock;
-import com.dogatorix.CuddlyItem;
 import com.dogatorix.YarnSpinnerBlock;
-import net.minecraft.util.valueproviders.UniformInt;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
-import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -41,6 +33,10 @@ public class BlockInit {
         public static final RegistryObject<CuddlyBlock> BREAD = BLOCKS.register("bread",
                         () -> new CuddlyBlock(
                                         BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).sound(SoundType.WOOL)));
+
+        public static final RegistryObject<CuddlyBlock> HAMMERHEAD_SHARK = BLOCKS.register("hammerhead_shark",
+                        () -> new CuddlyBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.LIGHT_GRAY_WOOL)));
 
         public static final RegistryObject<Block> YARN_SPINNER = BLOCKS.register("yarn_spinner",
                         () -> new YarnSpinnerBlock(

@@ -1,8 +1,6 @@
 package com.dogatorix.mixinreplacement;
 
 import com.dogatorix.CuddlyItem;
-
-import net.minecraft.nbt.StringTag;
 import net.minecraftforge.event.AnvilUpdateEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;

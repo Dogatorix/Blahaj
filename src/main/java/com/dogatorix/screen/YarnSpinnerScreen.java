@@ -10,8 +10,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
 public class YarnSpinnerScreen extends AbstractContainerScreen<YarnSpinnerMenu> {
-    private static final ResourceLocation TEXTURE =
-            new ResourceLocation(Blahaj.MOD_ID, "textures/gui/yarn_spinner_gui.png");
+    private static final ResourceLocation TEXTURE = new ResourceLocation(Blahaj.MOD_ID,
+            "textures/gui/yarn_spinner_gui.png");
 
     public YarnSpinnerScreen(YarnSpinnerMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(pMenu, pPlayerInventory, pTitle);
@@ -38,7 +38,7 @@ public class YarnSpinnerScreen extends AbstractContainerScreen<YarnSpinnerMenu> 
     }
 
     private void renderProgressArrow(GuiGraphics guiGraphics, int x, int y) {
-        if(menu.isCrafting()) {
+        if (menu.isCrafting()) {
             guiGraphics.blit(TEXTURE, x + 85, y + 30, 176, 0, 8, menu.getScaledProgress());
         }
     }

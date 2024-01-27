@@ -18,8 +18,6 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.network.NetworkHooks;
-import org.jetbrains.annotations.Nullable;
-
 import com.dogatorix.init.BlockEntityInit;
 
 public class YarnSpinnerBlock extends BaseEntityBlock {
@@ -52,11 +50,12 @@ public class YarnSpinnerBlock extends BaseEntityBlock {
     }
 
     @Override
-    public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
+    public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand,
+            BlockHitResult pHit) {
         if (!pLevel.isClientSide()) {
             BlockEntity entity = pLevel.getBlockEntity(pPos);
-            if(entity instanceof YarnSpinnerBlockEntity) {
-                NetworkHooks.openScreen(((ServerPlayer)pPlayer), (YarnSpinnerBlockEntity)entity, pPos);
+            if (entity instanceof YarnSpinnerBlockEntity) {
+                NetworkHooks.openScreen(((ServerPlayer) pPlayer), (YarnSpinnerBlockEntity) entity, pPos);
             } else {
                 throw new IllegalStateException("Our Container provider is missing!");
             }
@@ -65,16 +64,15 @@ public class YarnSpinnerBlock extends BaseEntityBlock {
         return InteractionResult.sidedSuccess(pLevel.isClientSide());
     }
 
-    @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
         return new YarnSpinnerBlockEntity(pPos, pState);
     }
 
-    @Nullable
     @Override
-    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level pLevel, BlockState pState, BlockEntityType<T> pBlockEntityType) {
-        if(pLevel.isClientSide()) {
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level pLevel, BlockState pState,
+            BlockEntityType<T> pBlockEntityType) {
+        if (pLevel.isClientSide()) {
             return null;
         }
 

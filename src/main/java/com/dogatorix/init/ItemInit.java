@@ -2,7 +2,6 @@ package com.dogatorix.init;
 
 import com.dogatorix.Blahaj;
 import com.dogatorix.CuddlyItem;
-
 import net.minecraft.world.item.*;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -30,6 +29,10 @@ public class ItemInit {
                                         "block.blahaj.killer_whale.tooltip")));
         public static final RegistryObject<BlockItem> BREAD = addToTab(ITEMS.register("bread",
                         () -> new CuddlyItem(BlockInit.BREAD.get(), new Item.Properties().stacksTo(1), null)));
+
+        public static final RegistryObject<BlockItem> HAMMERHEAD_SHARK = addToTab(ITEMS.register("hammerhead_shark",
+                        () -> new CuddlyItem(BlockInit.HAMMERHEAD_SHARK.get(), new Item.Properties().stacksTo(1),
+                                        "block.blahaj.hammerhead_shark.tooltip")));
 
         public static final RegistryObject<BlockItem> YARN_SPINNER = addToTab(ITEMS.register("yarn_spinner",
                         () -> new BlockItem(BlockInit.YARN_SPINNER.get(), new Item.Properties().stacksTo(1))));
@@ -66,6 +69,5 @@ public class ItemInit {
                         () -> new Item(new Item.Properties().stacksTo(64))));
         public static final RegistryObject<Item> BLACK_YARN = addToTab(ITEMS.register("black_yarn",
                         () -> new Item(new Item.Properties().stacksTo(64))));
-
 
 }

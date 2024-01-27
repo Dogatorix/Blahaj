@@ -7,8 +7,6 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.client.IArmPoseTransformer;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
-import org.jetbrains.annotations.Nullable;
-
 import java.util.function.Consumer;
 
 public class HumanoidModelReplacement {
@@ -18,10 +16,12 @@ public class HumanoidModelReplacement {
 
 	private static class CuddlyItemExtension implements IClientItemExtensions {
 
-		private static HumanoidModel.ArmPose pose = HumanoidModel.ArmPose.create("blahaj_arm_pose", true, new CuddlyArmTransformer());
+		private static HumanoidModel.ArmPose pose = HumanoidModel.ArmPose.create("blahaj_arm_pose", true,
+				new CuddlyArmTransformer());
 
 		@Override
-		public HumanoidModel.@Nullable ArmPose getArmPose(LivingEntity entityLiving, InteractionHand hand, ItemStack itemStack) {
+		public HumanoidModel. ArmPose getArmPose(LivingEntity entityLiving, InteractionHand hand,
+				ItemStack itemStack) {
 			return pose;
 		}
 	}
