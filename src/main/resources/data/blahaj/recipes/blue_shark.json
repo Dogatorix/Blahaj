@@ -7,13 +7,13 @@
 	],
 	"key": {
 		"#": {
-			"item": "minecraft:light_blue_wool"
+			"item": "blahaj:light_blue_yarn"
 		},
 		"P": {
-			"item": "minecraft:pink_dye"
+			"item": "blahaj:pink_yarn"
 		},
 		"W": {
-			"item": "minecraft:white_wool"
+			"item": "blahaj:white_yarn"
 		}
 	},
 	"result": {

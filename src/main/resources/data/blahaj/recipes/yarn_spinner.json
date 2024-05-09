@@ -1,0 +1,26 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"   ",
+		"BPW",
+		" T "
+	],
+	"key": {
+		"B": {
+			"item": "minecraft:light_blue_wool"
+		},
+		"P": {
+			"item": "minecraft:pink_wool"
+		},
+		"W": {
+			"item": "minecraft:white_wool"
+		},
+		"T": {
+			"item": "minecraft:crafting_table"
+		}
+	},
+	"result": {
+		"item": "blahaj:yarn_spinner",
+		"count": 1
+	}
+}

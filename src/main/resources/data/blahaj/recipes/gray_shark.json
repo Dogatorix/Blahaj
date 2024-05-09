@@ -3,21 +3,21 @@
 	"pattern": [
 		" # ",
 		"###",
-		"GW "
+		"PW "
 	],
 	"key": {
 		"#": {
-			"item": "blahaj:blue_yarn"
+			"item": "blahaj:gray_yarn"
 		},
-		"G": {
-			"item": "blahaj:light_gray_yarn"
+		"P": {
+			"item": "blahaj:pink_yarn"
 		},
 		"W": {
 			"item": "blahaj:white_yarn"
 		}
 	},
 	"result": {
-		"item": "blahaj:blue_whale",
+		"item": "blahaj:gray_shark",
 		"count": 1
 	}
 }

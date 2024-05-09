@@ -30,10 +30,6 @@ public class ItemInit {
         public static final RegistryObject<BlockItem> BREAD = addToTab(ITEMS.register("bread",
                         () -> new CuddlyItem(BlockInit.BREAD.get(), new Item.Properties().stacksTo(1), null)));
 
-        public static final RegistryObject<BlockItem> HAMMERHEAD_SHARK = addToTab(ITEMS.register("hammerhead_shark",
-                        () -> new CuddlyItem(BlockInit.HAMMERHEAD_SHARK.get(), new Item.Properties().stacksTo(1),
-                                        "block.blahaj.hammerhead_shark.tooltip")));
-
         public static final RegistryObject<BlockItem> YARN_SPINNER = addToTab(ITEMS.register("yarn_spinner",
                         () -> new BlockItem(BlockInit.YARN_SPINNER.get(), new Item.Properties().stacksTo(1))));
 

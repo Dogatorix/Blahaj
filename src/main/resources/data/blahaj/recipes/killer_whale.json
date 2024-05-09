@@ -7,7 +7,7 @@
 	],
 	"key": {
 		"#": {
-			"item": "blahaj:blue_yarn"
+			"item": "blahaj:black_yarn"
 		},
 		"G": {
 			"item": "blahaj:light_gray_yarn"
@@ -17,7 +17,7 @@
 		}
 	},
 	"result": {
-		"item": "blahaj:blue_whale",
+		"item": "blahaj:killer_whale",
 		"count": 1
 	}
 }

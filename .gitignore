@@ -22,6 +22,10 @@ eclipse
 run
 TEST.md
 *.js
+dist/
+
+.vscode
+*.code-workspace
 
 # Files from Forge MDK
 forge*changelog.txt

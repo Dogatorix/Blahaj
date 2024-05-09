@@ -34,10 +34,6 @@ public class BlockInit {
                         () -> new CuddlyBlock(
                                         BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).sound(SoundType.WOOL)));
 
-        public static final RegistryObject<CuddlyBlock> HAMMERHEAD_SHARK = BLOCKS.register("hammerhead_shark",
-                        () -> new CuddlyBlock(
-                                        BlockBehaviour.Properties.copy(Blocks.LIGHT_GRAY_WOOL)));
-
         public static final RegistryObject<Block> YARN_SPINNER = BLOCKS.register("yarn_spinner",
                         () -> new YarnSpinnerBlock(
                                         BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));

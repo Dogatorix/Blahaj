@@ -17,7 +17,6 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
-import net.minecraftforge.common.util.FakePlayer;
 import com.dogatorix.mixinreplacement.HumanoidModelReplacement;
 import com.dogatorix.sound.ModSounds;
 
@@ -84,16 +83,6 @@ public class CuddlyItem extends BlockItem {
 		}
 
 		return super.use(level, player, hand);
-	}
-
-	@Override
-	public void onCraftedBy(ItemStack stack, Level level, Player player) {
-		if (player != null && !(player instanceof FakePlayer)) { // compensate for auto-crafter mods
-			// todo: readd compatibility
-			// stack.addTagElement(OWNER_KEY,
-			// StringTag.valueOf(player.getName().getString()));
-		}
-		super.onCraftedBy(stack, level, player);
 	}
 
 	@Override

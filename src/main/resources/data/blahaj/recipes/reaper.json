@@ -7,17 +7,17 @@
 	],
 	"key": {
 		"#": {
-			"item": "blahaj:blue_yarn"
+			"item": "blahaj:red_yarn"
 		},
 		"G": {
-			"item": "blahaj:light_gray_yarn"
+			"item": "blahaj:green_yarn"
 		},
 		"W": {
-			"item": "blahaj:white_yarn"
+			"item": "blahaj:pink_yarn"
 		}
 	},
 	"result": {
-		"item": "blahaj:blue_whale",
+		"item": "blahaj:reaper",
 		"count": 1
 	}
 }
