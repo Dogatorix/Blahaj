@@ -4,7 +4,7 @@ A Minecraft mod that adds toys and plushies, most notably the IKEA BLÅHAJ!
 
 Continuation of the original Blåhaj mod by [hibiii](https://github.com/hibiii) for Forge!
 
-Most plushies are currently unobtainable with the exception of Blåhaj, Blåvingad, and the Bread Pillow; however, they will be obtainable in the future via a special method.
+All plushies are craftable using yarn, which you get from turning wool -> yarn in the Yarn Spinner block!
 
 ![Players holding Blåhaj](./.pretty_readme/banner.png)
 
